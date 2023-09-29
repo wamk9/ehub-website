@@ -1,0 +1,10 @@
+:root {
+--header-height: 3rem;
+--nav-width: 68px;
+--first-color: #0098d8;
+--first-color-light: #77d6fe;
+--white-color: #f7f6fb;
+--body-font: "Nunito", sans-serif;
+--normal-font-size: 1rem;
+--z-fixed: 100;
+}
