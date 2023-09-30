@@ -6,7 +6,7 @@
           <span class="nav_logo-name">{{env('APP_NAME')}}</span>
         </a>
         <div class="nav_list">
-            @foreach ($navLinks as $nav)
+            @foreach ($sidebarNav as $nav)
                 <x-sidebar-nav
                     :link="$nav['link']"
                     :icon="$nav['icon']"

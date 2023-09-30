@@ -14,14 +14,18 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::controller(Site\HomeController::class)->group(function(){
-    Route::get('/','index');
+Route::middleware('var.site')->group(function() {
+    Route::controller(Site\HomeController::class)->group(function(){
+        Route::get('/','index')->name('site.home');
+
+        // Used to redirect to an anchor, do nothing more...
+        Route::get('/#about','index')->name('site.home.about');
+        Route::get('/#plans', 'index')->name('site.home.plans');
+        Route::get('/#contact', 'index')->name('site.home.contact');
+    });
 });
 
-
-
-
-Route::middleware('auth')->group(function() {
+Route::middleware(['auth','var.admin'])->group(function() {
     Route::get('admin/dashboard', [Admin\Dashboard\DashboardController::class, 'index'])->name('admin.dashboard');
     Route::get('admin/config', [Admin\Dashboard\DashboardController::class, 'index'])->name('admin.config');
     Route::get('admin/logout', [Admin\Auth\LoginController::class, 'logout'])->name('admin.logout');
