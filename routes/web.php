@@ -19,10 +19,11 @@ Route::middleware('var.site')->group(function() {
         Route::get('/','index')->name('site.home');
 
         // Used to redirect to an anchor, do nothing more...
-        Route::get('/#about','index')->name('site.home.about');
-        Route::get('/#plans', 'index')->name('site.home.plans');
-        Route::get('/#contact', 'index')->name('site.home.contact');
+        Route::get('/#about','index')->name('site.about');
+        Route::get('/#contact', 'index')->name('site.contact');
     });
+
+    Route::get('/plans', [Site\PlanController::class, 'index'])->name('site.plans');
 });
 
 Route::middleware(['auth','var.admin'])->group(function() {

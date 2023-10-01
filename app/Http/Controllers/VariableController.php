@@ -32,11 +32,11 @@ class VariableController extends Controller
     {
         return [
             [
-                'link' => route('site.home.about'),
+                'link' => route('site.about'),
                 'name' => "Sobre"
             ],
             [
-                'link' => route('site.home.plans'),
+                'link' => route('site.plans'),
                 'name' => "Planos"
             ],
             [
@@ -44,7 +44,7 @@ class VariableController extends Controller
                 'name' => "Demonstração"
             ],
             [
-                'link' => route('site.home.contact'),
+                'link' => route('site.contact'),
                 'name' => "Contato"
             ],
         ];
@@ -58,49 +58,95 @@ class VariableController extends Controller
                 'title' => '<h1>Descubra O Poder Do Gerenciamento</h1>',
                 'description' => '',
                 'type' => 'innerHtml',
-                'image' => 'https://placehold.co/600x400.png',
+                'image' => 'img/site/home/home-entrance.webp',
                 'titleside' => 'left'
             ],
             [
                 'id' => 'about',
-                'title' => '<h1>Sobre o eHub</h1>',
-                'description' => 'Lorem ipsuuuuuuuum grandão',
+                'title' => '<h1>Sobre o <img class="mb-3" src="/img/ehub-white-logo.webp"/></h1>',
+                'description' => 'Somos uma plataforma totalmente voltada para gerenciamento de ligas e campeonatos, sejam eles do mundo real ou virtual.',
                 'type' => 'innerHtml',
-                'image' => 'https://placehold.co/600x400/orange/white',
+                'image' => 'img/site/home/about.webp',
                 'titleside' => 'left'
             ],
             [
                 'id' => 'championship',
                 'title' => '<h1>Gerencie Campeonatos</h1>',
-                'description' => 'Lorem ipsuuuuuuuum grandão',
+                'description' => 'Tenha total controle sobre seus campeonatos e forneça a seu público total transparência. No eHub você poderá gerenciar desde a pontuação até responder situações que geram protestos dos participantes destes.',
                 'type' => 'innerHtml',
-                'image' => 'https://placehold.co/600x400.png',
+                'image' => 'img/site/home/championship.webp',
                 'titleside' => 'right'
             ],
             [
                 'id' => 'club',
                 'title' => '<h1>Crie O Seu Próprio Clude De Assinaturas</h1>',
-                'description' => 'Lorem ipsuuuuuuuum grandão',
+                'description' => 'Realizar campeonatos não é uma tarefa fácil, por esse motivo criamos o Clube de Assinatura, para aqueles que não aguentam participar de apenas um campeonato, poderá a partir do clube participar de quantos campeonatos desejar, e tudo isso por um valor mensal pré-definido por você.',
                 'type' => 'innerHtml',
-                'image' => 'https://placehold.co/600x400/orange/white',
+                'image' => 'img/site/home/club.webp',
                 'titleside' => 'left'
             ],
             [
                 'id' => 'style',
                 'title' => '<h1>Crie O Seu Próprio Estilo</h1>',
-                'description' => 'Lorem ipsuuuuuuuum grandão',
+                'description' => 'Com uma API poderosa de fundo, o eHub permite com que você consigo modificar o seu próprio tema, tornando-o totalmente diferenciando da concorrência.',
                 'type' => 'innerHtml',
-                'image' => 'https://placehold.co/600x400.png',
+                'image' => 'img/site/home/style.webp',
                 'titleside' => 'right'
             ],
             [
                 'id' => 'plans',
                 'title' => '<h1>Gostou? Então Confira Nossos Planos!</h1>',
-                'description' => 'Lorem ipsuuuuuuuum grandão',
-                'type' => 'planModule',
-                'image' => 'https://placehold.co/600x400/orange/white',
+                'description' => '',
+                'type' => 'innerHtml',
+                'image' => 'img/site/home/plan.webp',
                 'titleside' => 'left'
             ],
+            [
+                'id' => 'contact',
+                'title' => '<h1>Ficou com alguma dúvida?</h1>',
+                'description' => 'Sem problemas, disponibilizamos para você o nosso WhatsApp ou, se preferir, o email contato@ehubapp.com para sanar todas as suas dúvidas antes de contratar quaisquer plano.',
+                'type' => 'innerHtml',
+                'image' => 'img/site/home/contact.webp',
+                'titleside' => 'right'
+            ],
+        ];
+    }
+
+    private function websitePlanInformations()
+    {
+        return [
+            [
+                'id' => 'plan-1',
+                'title' => '<h1>Plano Grátis</h1>',
+                'description' => '',
+                'type' => 'innerHtml',
+                'image' => 'img/site/home/home-entrance.webp',
+                'titleside' => 'left'
+            ],
+            [
+                'id' => 'plan-2',
+                'title' => '<h1>Sobre o <img class="mb-3" src="/img/ehub-white-logo.webp"/></h1>',
+                'description' => 'Somos uma plataforma totalmente voltada para gerenciamento de ligas e campeonatos, sejam eles do mundo real ou virtual.',
+                'type' => 'innerHtml',
+                'image' => 'img/site/home/about.webp',
+                'titleside' => 'left'
+            ],
+            [
+                'id' => 'plan-3',
+                'title' => '<h1>Gerencie Campeonatos</h1>',
+                'description' => 'Tenha total controle sobre seus campeonatos e forneça a seu público total transparência. No eHub você poderá gerenciar desde a pontuação até responder situações que geram protestos dos participantes destes.',
+                'type' => 'innerHtml',
+                'image' => 'img/site/home/championship.webp',
+                'titleside' => 'right'
+            ],
+            [
+                'id' => 'plan-4',
+                'title' => '<h1>Crie O Seu Próprio Clude De Assinaturas</h1>',
+                'description' => 'Realizar campeonatos não é uma tarefa fácil, por esse motivo criamos o Clube de Assinatura, para aqueles que não aguentam participar de apenas um campeonato, poderá a partir do clube participar de quantos campeonatos desejar, e tudo isso por um valor mensal pré-definido por você.',
+                'type' => 'innerHtml',
+                'image' => 'img/site/home/club.webp',
+                'titleside' => 'left'
+            ]
         ];
     }
 
@@ -114,6 +160,8 @@ class VariableController extends Controller
         View::share('navbarNav', $this->websiteNavbar());
 
         if ($request->currentRoute == "site.home")
+            View::share('landingPage', $this->websiteLandingPageInformations());
+        if ($request->currentRoute == "site.plans")
             View::share('landingPage', $this->websiteLandingPageInformations());
     }
 }

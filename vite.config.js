@@ -5,6 +5,7 @@ let files = [
     'resources/css/admin/app.css',
     'resources/js/admin/app.js',
     'resources/css/site/landpage.css',
+    'resources/css/site/page.css',
     'resources/js/site/app.js',
 ];
 
@@ -24,4 +25,5 @@ export default defineConfig({
             },
         ],
     },
+    build: { assetsInlineLimit: 0 },
 });
